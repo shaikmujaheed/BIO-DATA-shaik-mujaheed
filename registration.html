@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+      background-color: #dfdcdc;
+      padding: 40px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+
+
+    h2 {
+      text-align: center;
+      color: #03050a;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #07080b;
+      font-weight: 500;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #2038ad;
+      border-radius: 5px;
+      background-color: #ffffff; 
+      color: #000; 
+    }
+
+    
+    ::placeholder {
+      color: white;
+      opacity: 1;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus {
+      border-color: #1d4ed8;
+      outline: none;
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #1e40af;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 5px;
+      accent-color: #1d4ed8;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #1d4ed8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1e3a8a;
+    }
+  </style>
+
+  <title>Job Application Form</title>
+</head>
+<body>
+  <h2>Job Application Form</h2>
+  <form action="/submit_application" method="post" enctype="multipart/form-data">
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="position">Position Applied For:</label><br>
+    <input type="text" id="position" name="position" required><br><br>
+
+    <label for="experience">Years of Experience:</label><br>
+    <input type="number" id="experience" name="experience" min="0" required><br><br>
+
+    <label for="resume">Upload Resume (PDF/DOC):</label><br>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+
+    <label for="coverletter">Cover Letter:</label><br>
+    <textarea id="coverletter" name="coverletter" rows="5" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Submit Application">
+  </form>
+</body>
+</html>
